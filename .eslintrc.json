@@ -2,5 +2,13 @@
   "extends": [
     "next/core-web-vitals",
     "@rocketseat/eslint-config/node"
-  ]
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
 }
