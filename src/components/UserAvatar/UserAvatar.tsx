@@ -18,7 +18,7 @@ export default function UserAvatar({ img = "/img/pixelArt.jpg", name }: Props) {
       />
       <div className="space-y-1">
         <h3 className="text-lg">{name}</h3>
-        <ProgressBar></ProgressBar>
+        <ProgressBar value={40} />
         <span className="font-medium text-amber-500">1500</span>
       </div>
     </div>
