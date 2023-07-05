@@ -13,7 +13,7 @@ const color = {
 export default function TaskBadge({ name, lvl }: Props) {
   return (
     <div
-      className={`w-fit rounded-full px-2 py-0.5 text-sm text-white`}
+      className={`w-fit rounded-full px-2 py-0.5 text-xs text-white`}
       style={{ backgroundColor: color[lvl] }}
     >
       {name}: {lvl}
