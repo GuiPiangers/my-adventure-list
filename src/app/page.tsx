@@ -4,10 +4,12 @@ import Task from "@/components/Task/TaskContainer";
 import UserAvatar from "@/components/UserAvatar/UserAvatar";
 import { TbCalendar } from "react-icons/tb";
 import { GoFilter } from "react-icons/go";
+import NavMobile from "@/components/NavMobile/NavMobile";
 
 export default function Home() {
   return (
     <main className="space-y-2 p-4">
+      <UserAvatar img="/img/pixelArt.jpg" name="Guilherme"></UserAvatar>
       <div className="flex items-center justify-between gap-1">
         <Search />
         <LinkIcon url="/">
@@ -17,8 +19,8 @@ export default function Home() {
           <GoFilter size={24} />
         </LinkIcon>
       </div>
-      <UserAvatar img="/img/pixelArt.jpg" name="Guilherme"></UserAvatar>
       <Task></Task>
+      <NavMobile></NavMobile>
     </main>
   );
 }
