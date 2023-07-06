@@ -13,13 +13,16 @@ export default function UserAvatar({ img = "/img/pixelArt.jpg", name }: Props) {
 
   return (
     <div className="flex w-full items-center gap-2">
-      <Image
-        src={img}
-        alt={name}
-        width={200}
-        height={200}
-        className="h-16 w-16 rounded-full bg-light-500"
-      />
+      <div className="flex flex-col items-center gap-1">
+        <Image
+          src={img}
+          alt={name}
+          width={200}
+          height={200}
+          className="h-16 w-16 rounded-full bg-light-500"
+        />
+        <span className="text-sm">Nível 10</span>
+      </div>
       <div className="w-full max-w-[200px] space-y-1">
         <h3 className="text-lg">{name}</h3>
         <ProgressBar value={xp} width="100%" />
