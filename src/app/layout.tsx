@@ -1,6 +1,7 @@
 import React from "react";
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import Header from "@/components/Header/Header";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <Header></Header>
+        {children}
+      </body>
     </html>
   );
 }
