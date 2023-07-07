@@ -1,12 +1,13 @@
 import LinkIcon from "@/components/LinkIcon/LinkIcon";
 import Search from "@/components/Search/Search";
-import Task from "@/components/Task/TaskContainer";
+import { Task } from "@/components/Task/index";
 import { TbCalendar } from "react-icons/tb";
 import { GoFilter } from "react-icons/go";
+import TaskCheck from "@/components/Task/TaskCheck";
 
 export default function Home() {
   return (
-    <main className="space-y-2 p-4">
+    <div className="space-y-4">
       <div className="flex items-center justify-between gap-1">
         <Search />
         <LinkIcon url="/">
@@ -16,7 +17,11 @@ export default function Home() {
           <GoFilter size={24} />
         </LinkIcon>
       </div>
-      <Task />
-    </main>
+      <Task.Root check={<TaskCheck />}>
+        <Task.Title title="Fazer isso aqui" />
+        <Task.Badges importance={3} difficulty={4} />
+        <Task.Date date="07/07/2023" />
+      </Task.Root>
+    </div>
   );
 }

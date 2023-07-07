@@ -11,8 +11,10 @@ export default function Layout({ children }: props) {
   return (
     <>
       <Header />
-      <UserAvatar img="/img/pixelArt.jpg" name="Guilherme"></UserAvatar>
-      {children}
+      <main className="px-4">
+        <UserAvatar img="/img/pixelArt.jpg" name="Guilherme"></UserAvatar>
+        {children}
+      </main>
       <NavMobile />
     </>
   );
