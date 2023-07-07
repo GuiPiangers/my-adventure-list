@@ -4,7 +4,6 @@ import Task from "@/components/Task/TaskContainer";
 import UserAvatar from "@/components/UserAvatar/UserAvatar";
 import { TbCalendar } from "react-icons/tb";
 import { GoFilter } from "react-icons/go";
-import NavMobile from "@/components/NavMobile/NavMobile";
 
 export default function Home() {
   return (
@@ -20,7 +19,13 @@ export default function Home() {
         </LinkIcon>
       </div>
       <Task></Task>
-      <NavMobile></NavMobile>
+      <Task></Task>
+      <Task></Task>
+      <Task></Task>
+      <Task></Task>
+      <Task></Task>
+      <Task></Task>
+      <Task></Task>
     </main>
   );
 }

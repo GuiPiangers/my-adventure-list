@@ -2,6 +2,7 @@ import React from "react";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import Header from "@/components/Header/Header";
+import NavMobile from "@/components/NavMobile/NavMobile";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Header></Header>
         {children}
+        <NavMobile></NavMobile>
       </body>
     </html>
   );

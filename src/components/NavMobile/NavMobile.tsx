@@ -5,13 +5,13 @@ import { TbSwords, TbMoneybag, TbPackage } from "react-icons/tb";
 
 export default function NavMobile() {
   return (
-    <nav>
+    <nav className="fixed bottom-0 w-full bg-light-300 py-1">
       <ul className=" grid grid-cols-5">
-        <NavItem name="Hábitos" url="/" icon={<IoInfiniteSharp size={28} />} />
-        <NavItem name="Tarefas" url="/" icon={<FaRegCircleCheck size={28} />} />
-        <NavItem name="Aventura" url="/" icon={<TbSwords size={28} />} />
-        <NavItem name="Loja" url="/" icon={<TbMoneybag size={28} />} />
-        <NavItem name="Inventário" url="/" icon={<TbPackage size={28} />} />
+        <NavItem name="Hábitos" url="/" icon={<IoInfiniteSharp size={24} />} />
+        <NavItem name="Tarefas" url="/" icon={<FaRegCircleCheck size={24} />} />
+        <NavItem name="Aventura" url="/" icon={<TbSwords size={24} />} />
+        <NavItem name="Loja" url="/" icon={<TbMoneybag size={24} />} />
+        <NavItem name="Inventário" url="/" icon={<TbPackage size={24} />} />
       </ul>
     </nav>
   );
