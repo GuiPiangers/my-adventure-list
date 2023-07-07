@@ -16,14 +16,7 @@ export default function Home() {
           <GoFilter size={24} />
         </LinkIcon>
       </div>
-      <Task></Task>
-      <Task></Task>
-      <Task></Task>
-      <Task></Task>
-      <Task></Task>
-      <Task></Task>
-      <Task></Task>
-      <Task></Task>
+      <Task />
     </main>
   );
 }

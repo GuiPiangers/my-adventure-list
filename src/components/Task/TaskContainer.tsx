@@ -21,7 +21,7 @@ export default function TaskContainer({
           <h3 className={checked ? " line-through opacity-50" : ""}>
             Fazer isso aqui
           </h3>
-          <TaskBadgeContainer importance={2} difficulty={3} />
+          <TaskBadgeContainer importance={1} difficulty={4} />
           <TaskDate date="04/07/2023" />
           {/* <span className="flex items-center gap-2 text-sm">
             <TaskCheck size={16} />

@@ -13,7 +13,7 @@ export default function UserAvatar({ img = "/img/pixelArt.jpg", name }: Props) {
 
   return (
     <div className="flex w-full items-center gap-2 p-4">
-      <div className="flex flex-col items-center gap-1">
+      <div className="flex shrink-0 flex-col items-center gap-1">
         <Image
           src={img}
           alt={name}

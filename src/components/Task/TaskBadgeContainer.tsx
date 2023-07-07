@@ -8,8 +8,8 @@ type Props = {
 export default function TaskBadgeContainer({ importance, difficulty }: Props) {
   return (
     <div className="flex gap-2">
-      <TaskBadge name="Importância" lvl={importance} />
-      <TaskBadge name="Dificuldade" lvl={difficulty} />
+      <TaskBadge name="Imp" lvl={importance} title="Nível de Importância" />
+      <TaskBadge name="Dif" lvl={difficulty} title="Nível de Dificuldade" />
     </div>
   );
 }

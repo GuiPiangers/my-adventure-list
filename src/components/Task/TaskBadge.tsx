@@ -1,6 +1,7 @@
 type Props = {
   name: string;
   lvl: 1 | 2 | 3 | 4;
+  title?: string;
 };
 
 const color = {
@@ -10,11 +11,12 @@ const color = {
   4: "#D07C7C",
 };
 
-export default function TaskBadge({ name, lvl }: Props) {
+export default function TaskBadge({ name, lvl, title }: Props) {
   return (
     <div
       className={`w-fit rounded-full px-2 py-0.5 text-xs text-white`}
       style={{ backgroundColor: color[lvl] }}
+      title={title}
     >
       {name}: {lvl}
     </div>
