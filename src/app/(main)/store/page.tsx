@@ -7,7 +7,7 @@ export default function Page() {
         img="/img/pixelArt.jpg"
         name="Assistir 30 minutos de série"
         price={500}
-      ></Item>
+      />
     </main>
   );
 }
