@@ -4,6 +4,7 @@ import { HiArrowLeft } from "react-icons/hi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useRouter } from "next/navigation";
 import Input from "@/components/ui/Input";
+import TextArea from "@/components/ui/TextArea";
 
 export default function Page() {
   const router = useRouter();
@@ -26,7 +27,7 @@ export default function Page() {
           <h2 className="mb-2 font-semibold">Informações</h2>
 
           <Input label="Tarefa"></Input>
-          <Input label="Tarefa"></Input>
+          <TextArea></TextArea>
         </div>
       </main>
     </>

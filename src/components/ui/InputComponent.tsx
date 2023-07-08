@@ -1,23 +1,34 @@
-import { HTMLAttributes } from "react";
 import useId from "@mui/material/utils/useId";
+import { Slot } from "@radix-ui/react-slot";
+import { ReactNode } from "react";
 
 type Props = {
   label?: string;
-} & HTMLAttributes<HTMLInputElement>;
+  asChild?: boolean;
+  children?: ReactNode;
+};
 
-export default function FormField({ label, ...rest }: Props) {
+export default function InputComponent({
+  label,
+  asChild = false,
+  children,
+  ...rest
+}: Props) {
   const id = useId();
+  const Component = asChild ? Slot : "input";
 
   return (
     <div className="relative mt-2 flex flex-col">
-      <input
-        className="peer rounded-md border 
-            border-neutral-600 bg-transparent px-2 py-2 
-            placeholder:opacity-0 focus:outline-primary "
+      <Component
+        className="peer max-h-28 min-h-[40px] rounded-md 
+            border border-neutral-600 bg-transparent px-2 
+            py-2 placeholder:opacity-0 focus:outline-primary"
         placeholder={label}
         {...rest}
         id={id}
-      />
+      >
+        {children}
+      </Component>
       {label && (
         <label
           className="pointer-events-none absolute -top-0.5 left-2 -translate-y-1/2 
