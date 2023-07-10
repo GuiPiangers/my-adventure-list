@@ -4,18 +4,12 @@ import { ReactNode } from "react";
 
 type Props = {
   label?: string;
-  asChild?: boolean;
   children?: ReactNode;
 };
 
-export default function InputComponent({
-  label,
-  asChild = false,
-  children,
-  ...rest
-}: Props) {
+export default function InputStyle({ label, children, ...rest }: Props) {
   const id = useId();
-  const Component = asChild ? Slot : "input";
+  const Component = Slot;
 
   return (
     <div className="relative mt-2 flex flex-col">
