@@ -12,7 +12,12 @@ export default function ToggleButton({ img, name }: Props) {
   const id = useId();
   return (
     <div className="flex flex-col items-center">
-      <Toggle.Root aria-label="Toggle italic" id={id} className="group">
+      <Toggle.Root
+        aria-label="Toggle italic"
+        id={id}
+        className="group box-border rounded-full
+        outline-none focus:border-2 focus:border-primaryActive active:border-primaryActive "
+      >
         <Image
           className="h-10 w-10 rounded-full opacity-80 grayscale transition 
           group-data-[state=on]:opacity-100 group-data-[state=on]:grayscale-0 "
