@@ -7,7 +7,7 @@ import Input from "@/components/form/Input";
 import TextArea from "@/components/form/TextArea";
 import Select from "@/components/form/Select";
 import SelectBar from "@/components/form/SelectBar/RangeInput";
-import ToggleButton from "@/components/form/Toggle";
+import ToggleButtons from "@/components/form/ToggleButtons/ToggleButtons";
 
 export default function Page() {
   const router = useRouter();
@@ -46,13 +46,7 @@ export default function Page() {
           <SelectBar />
 
           <h3 className="">Atributos</h3>
-          <div className="flex gap-4 overflow-x-auto">
-            <ToggleButton img="/img/pixelArt.jpg" name="Força" />
-            <ToggleButton img="/img/pixelArt.jpg" name="Inteligência" />
-            <ToggleButton img="/img/pixelArt.jpg" name="Carisma" />
-            <ToggleButton img="/img/pixelArt.jpg" name="Criatividade" />
-            <ToggleButton img="/img/pixelArt.jpg" name="Organização" />
-          </div>
+          <ToggleButtons></ToggleButtons>
         </div>
       </main>
     </>

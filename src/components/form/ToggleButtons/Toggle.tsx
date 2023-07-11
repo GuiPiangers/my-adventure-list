@@ -11,7 +11,7 @@ type Props = {
 export default function ToggleButton({ img, name }: Props) {
   const id = useId();
   return (
-    <div className="flex shrink-0 flex-col items-center">
+    <div className="flex w-fit shrink-0 flex-col items-center">
       <Toggle.Root
         aria-label="Toggle italic"
         id={id}
