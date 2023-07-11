@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 type Props = {
-  value: number;
+  value: number | string;
 };
 
 export default function Gold({ value }: Props) {

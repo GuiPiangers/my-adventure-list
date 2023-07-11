@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProgressBar from "../ProgressBar";
 import Gold from "../Gold";
+import XP from "../XP";
 
 type Props = {
   name: string;
@@ -28,7 +29,7 @@ export default function UserAvatar({ img = "/img/pixelArt.jpg", name }: Props) {
         <ProgressBar value={xp} width="100%" />
         <div className=" flex items-center justify-between gap-2">
           <Gold value={gold}></Gold>
-          <span className="text-primary">{xp} XP</span>
+          <XP value={xp} />
         </div>
       </div>
     </div>
