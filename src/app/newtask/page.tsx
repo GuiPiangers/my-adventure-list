@@ -7,7 +7,6 @@ import Input from "@/components/ui/Input";
 import TextArea from "@/components/ui/TextArea";
 import Select from "@/components/ui/Select";
 import SelectBar from "@/components/ui/SelectBar/SelectBar";
-import RangerInput from "@/components/ui/RangerInput";
 
 export default function Page() {
   const router = useRouter();
@@ -26,7 +25,7 @@ export default function Page() {
 
       <main className="p-4">
         <div className="flex flex-col gap-2 rounded-md border-2 border-light-400 bg-light-100 p-2">
-          <h2 className="mb-2 font-semibold">Informações</h2>
+          <h2 className="mb-1 text-lg font-semibold">Informações</h2>
 
           <Input label="Tarefa" />
           <TextArea label="Observação" />
@@ -37,10 +36,11 @@ export default function Page() {
           </Select>
         </div>
         <div className="flex flex-col gap-2 rounded-md border-2 border-light-400 bg-light-100 p-2">
-          <h2 className="mb-2 font-semibold">Recompensa</h2>
-
+          <h2 className="mb-1 text-lg font-semibold">Recompensa</h2>
+          <h3 className="">Importância</h3>
           <SelectBar />
-          <RangerInput></RangerInput>
+          <h3 className="">Dificuldade</h3>
+          <SelectBar />
         </div>
       </main>
     </>
