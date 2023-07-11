@@ -6,13 +6,13 @@ import * as Slider from "@radix-ui/react-slider";
 
 export default function SelectBar() {
   const [selectValue, setSelectValue] = useState([0]);
-  const labelList = useRef<HTMLDivElement>(null);
+  const labelListRef = useRef<HTMLDivElement>(null);
+  const selectRageRef = useRef<HTMLSpanElement>(null);
 
-  const handleOnChangeValue = (value: number[]) => {
-    setSelectValue(value);
-    if (labelList.current === null) return;
-    const labels = labelList.current.querySelectorAll(`[data-svalue]`);
-    const selectedLabel = labelList.current
+  const addLabelClassList = (value: number[]) => {
+    if (labelListRef.current === null) return;
+    const labels = labelListRef.current.querySelectorAll(`[data-svalue]`);
+    const selectedLabel = labelListRef.current
       .querySelectorAll(`[data-svalue]`)
       .item(value[0]);
 
@@ -27,7 +27,7 @@ export default function SelectBar() {
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex items-center justify-between" ref={labelList}>
+      <div className="flex items-center justify-between" ref={labelListRef}>
         <Item
           className="font-semibold text-primary"
           changeValue={handleOnChangeValue}
@@ -49,7 +49,9 @@ export default function SelectBar() {
           <Slider.Range className="absolute h-full rounded-full bg-primary" />
         </Slider.Track>
         <Slider.Thumb
-          className="block h-5 w-5 rounded-full border border-primary bg-white focus:outline-primary"
+          ref={selectRageRef}
+          className="block h-5 w-5 rounded-full border border-primary bg-white outline-none 
+            ring-primaryActive ring-opacity-40  focus:border-2 focus:ring-4 "
           aria-label="Volume"
         />
       </Slider.Root>
