@@ -7,6 +7,7 @@ import Input from "@/components/form/Input";
 import TextArea from "@/components/form/TextArea";
 import Select from "@/components/form/Select";
 import SelectBar from "@/components/form/SelectBar/RangeInput";
+import ToggleButton from "@/components/form/Toggle";
 
 export default function Page() {
   const router = useRouter();
@@ -41,6 +42,8 @@ export default function Page() {
           <SelectBar />
           <h3 className="">Dificuldade</h3>
           <SelectBar />
+
+          <ToggleButton img="/img/pixelArt.jpg" name="Força"></ToggleButton>
         </div>
       </main>
     </>
