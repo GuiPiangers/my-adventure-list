@@ -10,6 +10,7 @@ import SelectBar from "@/components/form/SelectBar/RangeInput";
 import ToggleButtons from "@/components/form/ToggleButtons/ToggleButtons";
 import Gold from "@/components/Gold";
 import XP from "@/components/XP";
+import InputStyle from "@/components/form/InputStyle";
 
 export default function Page() {
   const router = useRouter();
@@ -53,6 +54,32 @@ export default function Page() {
           <div className="flex items-center gap-6">
             <Gold value={`${5} - ${10}`} />
             <XP value={`${15} - ${30}`} className="flex-row-reverse" />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2 rounded-md border-2 border-light-400 bg-light-100 p-2">
+          <h2 className="mb-1 text-lg font-semibold">Data</h2>
+
+          <Input label="Data limite" type="date" />
+          <div className="grid grid-cols-2 gap-2">
+            <Select label="Repetição">
+              <option value="">Não repetir</option>
+              <option value="Grupo 1">Diária</option>
+              <option value="Grupo 2">Semanal</option>
+              <option value="Grupo 2">Mensal</option>
+              <option value="Grupo 2">Anual</option>
+            </Select>
+            <InputStyle
+              label="A cada"
+              className="flex items-center justify-between gap-2"
+              asChild={false}
+            >
+              <input
+                type="number"
+                className="w-full bg-transparent pr-1.5 focus:outline-primary"
+              />
+              <span>dias</span>
+            </InputStyle>
           </div>
         </div>
       </main>
