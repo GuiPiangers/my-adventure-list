@@ -3,10 +3,10 @@
 import { HiArrowLeft } from "react-icons/hi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useRouter } from "next/navigation";
-import Input from "@/components/ui/Input";
-import TextArea from "@/components/ui/TextArea";
-import Select from "@/components/ui/Select";
-import SelectBar from "@/components/ui/SelectBar/RangeInput";
+import Input from "@/components/form/Input";
+import TextArea from "@/components/form/TextArea";
+import Select from "@/components/form/Select";
+import SelectBar from "@/components/form/SelectBar/RangeInput";
 
 export default function Page() {
   const router = useRouter();
