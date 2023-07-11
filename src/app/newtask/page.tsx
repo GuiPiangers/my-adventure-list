@@ -38,12 +38,21 @@ export default function Page() {
         </div>
         <div className="flex flex-col gap-2 rounded-md border-2 border-light-400 bg-light-100 p-2">
           <h2 className="mb-1 text-lg font-semibold">Recompensa</h2>
+
           <h3 className="">Importância</h3>
           <SelectBar />
+
           <h3 className="">Dificuldade</h3>
           <SelectBar />
 
-          <ToggleButton img="/img/pixelArt.jpg" name="Força"></ToggleButton>
+          <h3 className="">Atributos</h3>
+          <div className="flex gap-4 overflow-x-auto">
+            <ToggleButton img="/img/pixelArt.jpg" name="Força" />
+            <ToggleButton img="/img/pixelArt.jpg" name="Inteligência" />
+            <ToggleButton img="/img/pixelArt.jpg" name="Carisma" />
+            <ToggleButton img="/img/pixelArt.jpg" name="Criatividade" />
+            <ToggleButton img="/img/pixelArt.jpg" name="Organização" />
+          </div>
         </div>
       </main>
     </>
