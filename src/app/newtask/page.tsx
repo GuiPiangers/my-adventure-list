@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Input from "@/components/ui/Input";
 import TextArea from "@/components/ui/TextArea";
 import Select from "@/components/ui/Select";
-import SelectBar from "@/components/ui/SelectBar/SelectBar";
+import SelectBar from "@/components/ui/SelectBar/RangeInput";
 
 export default function Page() {
   const router = useRouter();

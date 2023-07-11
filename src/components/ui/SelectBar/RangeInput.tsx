@@ -25,6 +25,12 @@ export default function SelectBar() {
     selectedLabel.classList.add("font-semibold");
   };
 
+  const handleOnChangeValue = (value: number[]) => {
+    setSelectValue(value);
+    selectRageRef.current?.focus();
+    addLabelClassList(value);
+  };
+
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between" ref={labelListRef}>
