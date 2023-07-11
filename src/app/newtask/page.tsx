@@ -1,7 +1,6 @@
 "use client";
 
 import { HiArrowLeft } from "react-icons/hi";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { useRouter } from "next/navigation";
 import Input from "@/components/form/Input";
 import TextArea from "@/components/form/TextArea";
@@ -17,17 +16,17 @@ export default function Page() {
 
   return (
     <>
-      <header className="flex items-center justify-between gap-2 bg-primary px-4 py-1.5 text-white">
+      <header className="fixed z-50 flex w-full items-center justify-between gap-2 bg-primary px-4 py-1.5 text-white">
         <div className="flex items-center gap-2">
           <HiArrowLeft size={21} onClick={router.back} />
           <h1 className="text-xl">Nova tarefa</h1>
         </div>
-        <button>
-          <RxHamburgerMenu size={24} />
+        <button className="top-0 px-2 py-1.5 focus:outline-primary">
+          Criar
         </button>
       </header>
 
-      <main className="space-y-4 p-4">
+      <form className="space-y-4 p-4 pt-16">
         <div className="flex flex-col gap-2 rounded-md border-2 border-light-400 bg-light-100 p-2">
           <h2 className="mb-1 text-lg font-semibold">Informações</h2>
 
@@ -82,7 +81,7 @@ export default function Page() {
             </InputStyle>
           </div>
         </div>
-      </main>
+      </form>
     </>
   );
 }
