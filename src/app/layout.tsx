@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import { AuthenticationProvider } from "@/contexts/AuthenticationContext";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -17,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className} suppressHydrationWarning={true}>
-        {children}
+        <AuthenticationProvider>{children}</AuthenticationProvider>
       </body>
     </html>
   );
